@@ -27,3 +27,9 @@ Hard      | 3     | 404 | 132, 135, 137
 ----------
 
 Total Point: 1337
+
+__tanggal__:
+
+__penyisihan__ : 5/6 Agustus 2017
+
+__final__ : 16/17 September 2017
