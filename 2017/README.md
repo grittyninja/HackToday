@@ -14,7 +14,7 @@ No | Level     | Poin  | Tipe                   | Soal
 7  | Easy      | 74    |   -                    | -
 8  | Medium    | 87    |   -                    | -
 9  | Medium    | 89    |   -                    | -
-10 | Medium    | 91    |   Reverse Engineering  | rinnai
+10 | Medium    | 91    |   Reverse Engineering  | rennai
 11 | Medium    | 92    |   -                    | -
 12 | Medium    | 93    |   -                    | -
 13 | Hard      | 132   |   -                    | -
