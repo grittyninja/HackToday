@@ -6,23 +6,9 @@ class speeto:
         self.temp_file_name = '.speeto_temp'
         self.temp_file_use = False
         # load/check saved configuration (last/saved session) from local storage
-        try:
-            with open(self.temp_file_name,'r') as temp_file:
-                self.temp_file_use = True
-                print("using session file\n")
-        except FileNotFoundError:
-            # raise
-            with open(self.temp_file_name,'w') as temp_file:
-                temp_file.write("[speeto_temp_file]\n")
-                self.temp_file_use = True
-                print('creating new session file\n')
+      
 
-    def write_file(self,data):
-        if self.temp_file_use == False:
-            return -1
-        else:
-            with open(self.temp_file_name,'a') as temp_file:
-                temp_file.writelines(data)
+
 
     def create_socket(self, PORT = 8989):
         HOST = ''
