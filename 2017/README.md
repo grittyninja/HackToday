@@ -6,7 +6,7 @@ Progress
 No | Level     | Poin  | Tipe                   | Soal
 ---|-----------|-------|------------------------|-----------
 1  | Easy      | 62    |   Reverse Engineering  | speetest
-2  | Easy      | 65    |   -                    | -
+2  | Easy      | 65    |   Web Hacking          | it's deleted
 3  | Easy      | 67    |   -                    | -
 4  | Easy      | 69    |   -                    | -
 5  | Easy      | 71    |   -                    | -
