@@ -1,0 +1,10 @@
+directory traversal
+
+di test di :
+flask 0.12.2
+python 3.5
+
+setup:
+delete sebuah flag(pindahin ke trash)
+di folder src/static/css buat link ke /
+ln -s / portal
