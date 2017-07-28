@@ -28,5 +28,4 @@ ToDo
 - Rust (Client) + Node json serialization attack (Server) - rekenmachine - Exploitation Hard
 - SQL injection attack log - Forensic Medium
 - RSA p and q berdekatan - crypto medium
-- Expression Language injection Sprint - Web Hacking Medium
 
