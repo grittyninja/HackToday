@@ -1,2 +1,4 @@
 Host `resqua.php` di sembarang web server, kasih alamatnya di soal.
 Kasih binary `resqua` di soal.
+
+Flag: HackToday{perfect_square_is_perfect}
