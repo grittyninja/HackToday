@@ -7,6 +7,8 @@ def help():
     print('Available commands:\nhelp()\nstart()\nexit()\nconnect()')
 
 def flag():
+    for i in range(0,20):
+        print("congrats, you found it")
     print('The flag is nothing')
 
 
@@ -18,20 +20,16 @@ def bad_args():
     
 def connect():
     print("connecting")
-
+    print("mencoba untuk koneksi\n")
+    print("tapi sayangnya fitur ini belum jadi")
+def exit():
+    print("exiting")
 def console():
     while True:
-        inp = input(">>> ")
-
-        if inp == 'help':
-            help()
-        elif inp == 'start':
-            start()
-        elif inp == 'exit':
-            exit()
-        elif inp== 'connect':
-            print("connecting")
-    
+        try:
+            inp = input(">>> ").split('"')
+        except:
+            pass
 
 
 
