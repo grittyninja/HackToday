@@ -1,0 +1,2 @@
+Host file di dalem folder `release` ke webserver.
+Kasih alamatnya di soal.

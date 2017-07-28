@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Yak, Passwordnya?</title>
+  </head>
+  <body style="text-align: center;">
+
+    <div id="status"></div>
+    
+    <h1>Passwordnya?</h1>
+    <input type="text" style="font-size: 30px; width: 800px; text-align: center" onkeyup="checkPass(this.value);">
+    
+    <div id="result"></div>
+    
+    <script type='text/javascript'>
+      var statusElement = document.getElementById('status');
+      var resultElement = document.getElementById('result');
+      
+      function toCharCode(str) {
+		  var c = [];
+		  for (i = 0; i < str.length; i++)
+			c.push(str.charCodeAt(i));
+		  return c;
+	  }
+	  
+	  function checkPass(pass) {
+		   pass = pass.trim();
+		   if (pass === "") return;
+		  
+		   var passCode = toCharCode(pass);
+		   const passArray = new Uint8Array(passCode);		   
+		   const _buff = Module._malloc(passArray.length);
+		   Module.HEAPU8.set(passArray, _buff);
+		   
+		   var check = Module.ccall('cekpass', 'number', ['number', 'number'], [_buff, passArray.length]);
+		   console.log(check);
+		   
+		   if (check == 1) {
+			   resultElement.innerHTML  = "<h2>Selamat! Flag kamu: <code style='color: green;'>HackToday{" + pass + "}</code></h2>";
+			   resultElement.innerHTML += "Pajak ditanggung pemenang."; 
+		   } else {
+			   resultElement.innerHTML  = "<h2>Anda belum beruntung</h2>";
+		   }
+	  }
+
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          return function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            console.log(text);
+          };
+        })(),
+        printErr: function(text) {
+          if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+          console.error(text);
+        },
+        setStatus: function(text) {
+          statusElement.innerHTML = text + "&nbsp;";
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+          Module.setStatus(left ? 'Nyiapin... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'Selesai.');
+        }
+      };
+      Module.setStatus('Tunggu bentar...');
+      window.onerror = function() {
+        Module.setStatus('Ada error! Liat di console');
+        Module.setStatus = function(text) {
+          if (text) Module.printErr('[post-exception] ' + text);
+        };
+      };
+    </script>
+    {{{ SCRIPT }}}
+  </body>
+</html>
