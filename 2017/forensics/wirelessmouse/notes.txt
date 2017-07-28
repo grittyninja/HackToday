@@ -1,0 +1,1 @@
+Kami telah mengintercept koneksi salah satu user http://www.remotemouse.net/. User tersebut menggunakan gadget android untuk mengontrol laptop Windows miliknya.
