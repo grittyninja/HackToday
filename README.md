@@ -4,7 +4,7 @@ HackToday 0x00
 Kategori
 --------
  - Web Hacking
- - Binary Exploitation
+ - Exploitation
  - Reverse Engineering
  - Forensics
  - Cryptography

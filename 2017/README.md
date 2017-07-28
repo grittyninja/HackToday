@@ -11,7 +11,7 @@ No | Level     | Poin  | Tipe                   | Soal
 4  | Easy      | 69    |   -                    | -
 5  | Easy      | 71    |   -                    | -
 6  | Easy      | 73    |   -                    | -
-7  | Easy      | 74    |   Binary Exploitation  | turuturu
+7  | Easy      | 74    |   Exploitation         | turuturu
 8  | Medium    | 87    |   -                    | -
 9  | Medium    | 89    |   -                    | -
 10 | Medium    | 91    |   Reverse Engineering  | rennai
