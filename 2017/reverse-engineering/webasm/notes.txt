@@ -1,4 +1,4 @@
 Host file di dalem folder `release` ke webserver.
 Kasih alamatnya di soal.
 
-Flag: HackToday{k0pi nikmat gak bikin kembung}
+Flag: HackToday{k0pi_nikmat_gak_bikin_kembung}

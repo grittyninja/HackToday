@@ -9,7 +9,7 @@
 
     <div id="status"></div>
     
-    <h1>Passwordnya?</h1>
+    <h1>Halo, Passwordnya?</h1>
     <input type="text" style="font-size: 30px; width: 800px; text-align: center" onkeyup="checkPass(this.value);">
     
     <div id="result"></div>
@@ -35,10 +35,9 @@
 		   Module.HEAPU8.set(passArray, _buff);
 		   
 		   var check = Module.ccall('cekpass', 'number', ['number', 'number'], [_buff, passArray.length]);
-		   console.log(check);
 		   
 		   if (check == 1) {
-			   resultElement.innerHTML  = "<h2>Selamat! Flag kamu: <code style='color: green;'>HackToday{" + pass + "}</code></h2>";
+			   resultElement.innerHTML  = "<h2>Selamat! Anda mendapat <code style='color: green;'>HackToday{" + pass + "}</code></h2>";
 			   resultElement.innerHTML += "Pajak ditanggung pemenang."; 
 		   } else {
 			   resultElement.innerHTML  = "<h2>Anda belum beruntung</h2>";
