@@ -9,7 +9,7 @@ No | Level     | Poin  | Tipe                   | Soal          | Status
 2  | Easy      | 65    |   Web Hacking          | it's deleted  | Done
 3  | Easy      | 67    |   -                    | -             | -
 4  | Easy      | 69    |   -                    | -             | -
-5  | Easy      | 71    |   -                    | -             | -
+5  | Easy      | 71    |   Cryptography         | circle        | Done
 6  | Easy      | 73    |   Exploitation         | mrx           | Done
 7  | Easy      | 74    |   Exploitation         | turuturu      | Done
 8  | Medium    | 87    |   Cryptography         | cbc           | Done
