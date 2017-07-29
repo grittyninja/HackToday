@@ -1,0 +1,7 @@
+Jalankan `cbc_server.py` (listening di port 9876), bisa diganti portnya di kodingan.
+File `rahasia.py` taroh sefolder sama `cbc_server.py`.
+
+Kasih ke peserta `cbc_server.py` aja, jangan rahasianya.
+
+Flag: HackToday{flipping_tables_is_better_than_flipping_bits}
+

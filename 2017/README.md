@@ -1,6 +1,6 @@
 Progress
 --------
-**[#######________] 7 / 15**
+**[########_______] 8 / 15**
 
 
 No | Level     | Poin  | Tipe                   | Soal
@@ -10,9 +10,9 @@ No | Level     | Poin  | Tipe                   | Soal
 3  | Easy      | 67    |   -                    | -
 4  | Easy      | 69    |   -                    | -
 5  | Easy      | 71    |   -                    | -
-6  | Easy      | 73    |   -                    | -
+6  | Easy      | 73    |   -                    | -            
 7  | Easy      | 74    |   Exploitation         | turuturu
-8  | Medium    | 87    |   -                    | -
+8  | Medium    | 87    |   Cryptography         | cbc
 9  | Medium    | 89    |   -                    | -
 10 | Medium    | 91    |   Reverse Engineering  | rennai
 11 | Medium    | 92    |   Forensic             | wirelessmouse
