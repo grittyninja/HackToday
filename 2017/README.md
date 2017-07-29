@@ -1,6 +1,6 @@
 Progress
 --------
-**[########_______] 8 / 15**
+**[#########______] 9 / 15**
 
 
 No | Level     | Poin  | Tipe                   | Soal
@@ -10,7 +10,7 @@ No | Level     | Poin  | Tipe                   | Soal
 3  | Easy      | 67    |   -                    | -
 4  | Easy      | 69    |   -                    | -
 5  | Easy      | 71    |   -                    | -
-6  | Easy      | 73    |   -                    | -            
+6  | Easy      | 73    |   Exploitation         | mrx            
 7  | Easy      | 74    |   Exploitation         | turuturu
 8  | Medium    | 87    |   Cryptography         | cbc
 9  | Medium    | 89    |   -                    | -
