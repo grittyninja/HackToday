@@ -1,6 +1,6 @@
 Progress
 --------
-**[##########_____] 10 / 15**
+**[###########____] 11 / 15**
 
 
 No | Level     | Poin  | Tipe                   | Soal          | Status
@@ -8,7 +8,7 @@ No | Level     | Poin  | Tipe                   | Soal          | Status
 1  | Easy      | 62    |   Reverse Engineering  | speetest      | Done 
 2  | Easy      | 65    |   Web Hacking          | it's deleted  | Done
 3  | Easy      | 67    |   -                    | -             | -
-4  | Easy      | 69    |   -                    | -             | -
+4  | Easy      | 69    |   Exploitation         | epoch server  | Done
 5  | Easy      | 71    |   Cryptography         | circle        | Done
 6  | Easy      | 73    |   Exploitation         | mrx           | Done
 7  | Easy      | 74    |   Exploitation         | turuturu      | Done
