@@ -1,0 +1,10 @@
+Ini soalnya cuma file: theflag (cuma ini yg diberikan ke peserta)
+
+sisanya source code, siapa tau mau dicompile buat platform lain atau mau diganti flagnya
+
+untuk ganti flag:
+- edit file gen.py ganti flag tipuan dan flag benerannya
+- python gen.py > permute.h
+- make
+
+
