@@ -8,7 +8,7 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-
+ini_set('session.cookie_httponly', 1);
 session_start();
 if (!isset($_SESSION['action'])) {
     $_SESSION['action'] = "0";
