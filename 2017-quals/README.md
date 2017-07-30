@@ -1,13 +1,13 @@
 Progress
 --------
-**[############___] 12 / 15**
+**[############___] 13 / 15**
 
 
 No | Level     | Poin  | Tipe                   | Soal          | Status
 ---|-----------|-------|------------------------|---------------|-------
 1  | Easy      | 62    |   Reverse Engineering  | speetest      | Done 
 2  | Easy      | 65    |   Web Hacking          | it's deleted  | Done
-3  | Easy      | 67    |   Cryptography         | -             | Dev
+3  | Easy      | 67    |   Cryptography         | wadDiHell     | Done
 4  | Easy      | 69    |   Forensics            | dump incident | Done
 5  | Easy      | 71    |   Cryptography         | circle        | Done
 6  | Easy      | 73    |   Exploitation         | mrx           | Done

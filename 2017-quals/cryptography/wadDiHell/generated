@@ -1,0 +1,30 @@
+def xXxxxxx_XxxXxx():
+    secret = int(random.getrandbits(50))
+    return secret
+
+#Alice chooses a secret number
+a = xXxxxxx_XxxXxx()
+
+#Bob chooses a secret number
+b = xXxxxxx_XxxXxx()
+
+#Alice calculates her public key by doing:
+#A =  r^as mod p
+#Alice sends her public key to Bob
+A = pow(g,a,p)
+
+#Bob calculates his public key by doing:
+#B = r^bs mod p
+#Bob sends his public key to Alice
+B = pow(g,b,p)
+
+#Alice now calculates the shared key K:
+#K = B^as mod p
+SECRET_A = pow(B,a,p)
+
+#And Bob calculates the shared key K:
+#K = A^bs mod p
+SECRET_B = pow(A,b,p)
+
+if SECRET_A == SECRET_B
+	print 'SECRET VALID'
