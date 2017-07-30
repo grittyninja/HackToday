@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Comot - {title}</title>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=PT+Serif:400,700italic'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+*{box-sizing:border-box}html{background:#eee}article{position:relative;margin:50px auto;padding:50px;width:450px;font:14px/22px 'PT Serif',Georgia,serif;color:#222;text-align:justify;background:#fff;box-shadow:0 0 5px rgba(0,0,0,.2)}article h1{margin:10px 0;font:italic 700 22px/1 'PT Serif',Georgia,serif;color:#333}article code{color:#28e}article::after,article::before{content:'';position:absolute;z-index:-1;left:0;top:0;display:block;width:100%;height:100%;background:inherit;box-shadow:inherit;transform:rotate(2deg)}article::after{transform:rotate(-1deg)}
+    </style>
+</head>
+<body>
+<div id="body">
+  <article>
+  <h1>{title}</h1>
+  <i style="text-align: right; float: right" id="n">{name}</i>
+  <br/><br/>
+<p>{note}</p>
+</article>
+</div>
+</body>
+<span id="error"></span>
+<script>
+var _0xbec2=["\x7B\x22","\x22\x3A\x22","\x72\x65\x70\x6C\x61\x63\x65","\x22\x2C\x22","\x5C\x22","\x22\x7D","\x70\x61\x72\x73\x65","\x6E","\x74\x65\x73\x74","\x3C\x73\x70\x61\x6E\x20\x73\x74\x79\x6C\x65\x3D\x22\x63\x6F\x6C\x6F\x72\x3A\x72\x65\x64\x22\x3E\x3C\x62\x3E\x74\x75\x6C\x69\x73\x61\x6E\x20\x67\x61\x67\x61\x6C\x20\x64\x69\x6D\x75\x61\x74\x20\x6B\x61\x72\x65\x6E\x61\x20\x6E\x61\x6D\x61\x20\x70\x65\x6E\x75\x6C\x69\x73\x20\x6D\x65\x6E\x63\x75\x72\x69\x67\x61\x6B\x61\x6E\x2E\x20\x23\x73\x68\x61\x6D\x65\x3C\x2F\x62\x3E\x3C\x2F\x73\x70\x61\x6E\x3E","\x68\x74\x6D\x6C","\x23\x62\x6F\x64\x79","\x3C\x21\x2D\x2D\x20\x65\x72\x72\x6F\x72\x20\x6E\x61\x6D\x65\x3A\x20","\x2D\x2D\x3E","\x23\x65\x72\x72\x6F\x72","\x74\x65\x78\x74","\x23\x6E","\x6E\x3D"];function x(_0xbbf3x2){var _0xbbf3x2=JSON[_0xbec2[6]](_0xbec2[0]+ decodeURI(_0xbbf3x2)[_0xbec2[2]](/"/g,_0xbec2[4])[_0xbec2[2]](/&/g,_0xbec2[3])[_0xbec2[2]](/=/g,_0xbec2[1])+ _0xbec2[5]);n= _0xbbf3x2[_0xbec2[7]];r= /[^A-Za-z\s]/;if(r[_0xbec2[8]](n)){$(_0xbec2[11])[_0xbec2[10]](_0xbec2[9]);$(_0xbec2[14])[_0xbec2[10]](_0xbec2[12]+ n+ _0xbec2[13])}}var nm=$(_0xbec2[16])[_0xbec2[15]]();x(_0xbec2[17]+ nm)
+</script>
+</html>
