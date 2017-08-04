@@ -23,6 +23,7 @@ No | Level     | Poin  | Tipe                   | Soal          | Status | Docke
 
 ToDo
 --------
-- Invite peserta ke slack
+- Invite peserta ke slack - DONE
+- Invite peserta ke  Platform
 - Deploy semua challenge
 
