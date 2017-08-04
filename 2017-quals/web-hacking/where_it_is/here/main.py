@@ -1,6 +1,9 @@
 from flask import Flask, request, render_template
 # set the project root directory as the static folder, you can set others.
 app = Flask(__name__)
+import os
+assert os.environ['FLAG']
+
 
 @app.route('/')
 @app.route('/<index>')

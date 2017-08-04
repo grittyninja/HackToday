@@ -5,6 +5,8 @@ flask 0.12.2
 python 3.5
 
 setup:
-delete sebuah flag(pindahin ke trash)
+masukin environment variable dari FLAG
 di folder src/static/css buat link ke /
 ln -s / portal
+
+Need to do: test & hardening

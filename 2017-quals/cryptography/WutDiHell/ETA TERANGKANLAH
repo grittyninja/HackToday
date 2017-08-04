@@ -1,0 +1,8 @@
+USE SECRET TO DECRYPT THE FILE
+==============================================================
+Encrypt
+openssl aes-256-cbc -a -in flag -out flag.enc
+==============================================================
+Decrypt
+openssl aes-256-cbc -a -d -in flag.enc -out flag
+==============================================================
