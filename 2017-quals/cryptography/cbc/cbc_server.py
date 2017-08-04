@@ -3,7 +3,7 @@ import os
 from Crypto.Cipher import AES
 import rahasia
 
-HOST, PORT = "0.0.0.0", 9876
+HOST, PORT = "0.0.0.0", 40087
 
 banner = "Kamu bisa coba: masuk, keluar, bendera\n"
 
