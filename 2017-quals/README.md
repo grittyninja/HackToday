@@ -7,7 +7,7 @@ No | Level     | Poin  | Tipe                   | Soal          | Status | Docke
 ---|-----------|-------|------------------------|---------------|--------|------------|-----------------------|-------
 1  | Easy      | 62    |   Exploitation         | speetest      | Done   | ❌          | ❌ 40062/1             | ❌         
 2  | Easy      | 65    |   Web Hacking          | where_it_is   | Done   | ✔️          | ❌ 40065/2             | ❌               
-3  | Easy      | 67    |   Cryptography         | WutDiHell     | Done   | ❌          | ❌ 40067/1             | ❌             
+3  | Easy      | 67    |   Cryptography         | WutDiHell     | Done   | ➖          | ✔️                     | ✔️             
 4  | Easy      | 69    |   Forensics            | dump incident | Done   | ➖          | ✔️                     | ✔️               
 5  | Easy      | 71    |   Cryptography         | circle        | Done   | ➖          | ✔️                     | ✔️             
 6  | Easy      | 73    |   Exploitation         | mrx           | Done   | ❌          | ✔️ 40073/1             | ✔️             
