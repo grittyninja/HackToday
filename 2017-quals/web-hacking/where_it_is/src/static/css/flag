@@ -1,2 +1,5 @@
-seperti yang saya bilang, flagnya udah dihapus, tapi saya memberi sebuah portal, dengan nama portal, cobalah kunjungi
-from /here/main.py
+saya memberi sebuah portal, dengan nama portal, cobalah kunjungi
+
+ln -s / portal
+
+ /here/main.py
