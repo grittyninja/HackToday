@@ -5,7 +5,7 @@ Progress
 
 No | Level     | Poin  | Tipe                   | Soal          | Status | Dockerized | Deployed (PORT/SERVER)| Tested
 ---|-----------|-------|------------------------|---------------|--------|------------|-----------------------|-------
-1  | Easy      | 62    |   Exploitation         | speetest      | Done   | ❌          | ❌ 40062/1             | ❌         
+1  | Easy      | 62    |   Reverse Engineering  | balikin       | Done   | ❌          | ✔️             | ❌         
 2  | Easy      | 65    |   Web Hacking          | where_it_is   | Done   | ✔️          | ❌ 40065/2             | ❌               
 3  | Easy      | 67    |   Cryptography         | WutDiHell     | Done   | ➖          | ✔️                     | ✔️             
 4  | Easy      | 69    |   Forensics            | dump incident | Done   | ➖          | ✔️                     | ✔️               

@@ -2,7 +2,7 @@
 FROM ubuntu:16.04
 
 # Open port 5000
-EXPOSE 39000
+EXPOSE 40065
 
 # update
 RUN apt-get update
