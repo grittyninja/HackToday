@@ -9,3 +9,4 @@ masukin environment variable dari FLAG
 di folder src/static/css buat link ke /
 ln -s / portal
 
+Need to do: test & hardening
