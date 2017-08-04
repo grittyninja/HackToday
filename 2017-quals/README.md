@@ -12,7 +12,7 @@ No | Level     | Poin  | Tipe                   | Soal          | Status | Docke
 5  | Easy      | 71    |   Cryptography         | circle        | Done   | ➖          | ✔️                     | ✔️             
 6  | Easy      | 73    |   Exploitation         | mrx           | Done   | ❌          | ✔️ 40073/1             | ✔️             
 7  | Easy      | 74    |   Exploitation         | turuturu      | Done   | ❌          | ✔️ 40074/1             | ✔️             
-8  | Medium    | 87    |   Cryptography         | cbc           | Done   | ❌          | ❌ 40087/2             | ❌             
+8  | Medium    | 87    |   Cryptography         | cbc           | Done   | ✔️          | ✔️ 40087/2             | ✔️             
 9  | Medium    | 89    |   Exploitation         | epoch server  | Done   | ✔️          | ✔️ 40089/1             | ✔️               
 10 | Medium    | 91    |   Reverse Engineering  | rennai        | Done   | ➖          | ✔️                     | ✔️         
 11 | Medium    | 92    |   Forensics            | wirelessmouse | Done   | ➖          | ✔️                     | ✔️         
