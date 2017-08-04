@@ -16,7 +16,11 @@ def css():
 @app.route('/css/<path:filename>')
 def send_css(filename):
     return send_from_directory('css', filename)
-    
+
+@app.route('/robots.txt')
+def robot():
+    return 'disallow: /static/css/flag'
+
 @app.route('/static/css/portal/')
 @app.route('/static/css/portal')
 def thi():
@@ -25,3 +29,6 @@ def thi():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'),404
+
+if __name__ == '__main__':    
+    app.run(host='0.0.0.0',port=80)
