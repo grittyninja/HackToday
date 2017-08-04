@@ -6,7 +6,7 @@ Progress
 No | Level     | Poin  | Tipe                   | Soal          | Status | Dockerized | Deployed | Tested
 ---|-----------|-------|------------------------|---------------|--------|------------|----------|-------
 1  | Easy      | 62    |   Exploitation         | speetest      | Done   | ❌          | ❌        | ❌         
-2  | Easy      | 65    |   Web Hacking          | it's deleted  | Done   | ❌          | ❌        | ❌               
+2  | Easy      | 65    |   Web Hacking          | it's deleted  | Done   | ✔️                    | ❌        | ❌               
 3  | Easy      | 67    |   Cryptography         | WutDiHell     | Done   | ❌          | ❌        | ❌               
 4  | Easy      | 69    |   Forensics            | dump incident | Done   | ➖          | ✔️        | ✔️               
 5  | Easy      | 71    |   Cryptography         | circle        | Done   | ➖          | ❌        | ❌               
