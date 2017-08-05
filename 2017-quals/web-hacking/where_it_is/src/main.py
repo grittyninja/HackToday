@@ -11,7 +11,7 @@ def root(index="index.html"):
 @app.route('/css')
 @app.route('/css/')
 def css():
-    return 'one step closer'
+    return app.send_static_file("closer.html")
 
 @app.route('/css/<path:filename>')
 def send_css(filename):
@@ -24,7 +24,7 @@ def robot():
 @app.route('/static/css/portal/')
 @app.route('/static/css/portal')
 def thi():
-    return 'you got the portal, now use it'
+    return app.send_static_file("portal.html")
 
 @app.errorhandler(404)
 def page_not_found(e):
