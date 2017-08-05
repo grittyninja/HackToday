@@ -18,7 +18,7 @@ if(isset($_POST['password']))
 	for($i = 0; $i < strlen($flag); $i++)
 	{
 		if($_POST['password'][$i] == $flag[$i])
-			sleep($i);
+			sleep(1);
 		else
 			die("Wrong!");
 	}
