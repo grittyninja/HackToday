@@ -1,3 +1,12 @@
+<?php
+$myusername = mysqli_real_escape_string($_POST['username']);
+$mypassword = mysqli_real_escape_string($_POST['password']); 
+$myrole = mysqli_real_escape_string($_POST['role']);
+echo $myusername;
+echo $mypassword;
+echo $myrole;
+?>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -7,9 +16,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <div class="container">
-	<h2>Login</h2>
+
+	<h2>register</h2>
 	<br>
-	<form method="POST" action="handle.php">
+<form method="POST" action="">
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" placeholder="" class="form-control" id="username" placeholder="Your username" />
@@ -18,7 +28,13 @@
         <label for="password">password</label>
         <input type="password" placeholder="" class="form-control" id="password" placeholder="password" />
     </div>
-    
-        <button class="btn btn-block btn-danger btn-lg">Login</button>
+ 	<div class="form-group">
+        <label for="role">Role</label>
+        <select>
+  	<option value="heker">heker</option>
+  	<option value="nubi">nubi</option>
+	</select>
+    </div>   
+        <button class="btn btn-block btn-danger btn-lg">Register</button>
         
-     </form>
+</form>
