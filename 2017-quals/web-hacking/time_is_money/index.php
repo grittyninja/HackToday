@@ -12,7 +12,7 @@
 
 <?php
 
-$flag ="HackToday{t111111me3e3e3e3e3e3e_15555_moneyyy_artinya_____waktu_adal777777aaaahhhh____uang__$$$$$$$$}";
+$flag ="HackToday{t111111me3e3e3e3e3e3e_15555_moneyyy_artinya_____waktu_adal777777aaaahhhh____uang__}";
 if(isset($_POST['password']))
 {
 	for($i = 0; $i < strlen($flag); $i++)
