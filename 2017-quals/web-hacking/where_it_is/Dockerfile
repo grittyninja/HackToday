@@ -10,6 +10,12 @@ RUN pip install -r /tmp/requirements.txt
 # copy over our app code
 COPY ./src /app
 
+# Create decoy
+COPY ./here /here
+
+# create portal
+RUN /bin/ln -s / /app/static/css/portal
+
 # set an environmental variable, MESSAGE,
 # which the app will use and display
 ENV MESSAGE "hello from Docker"
