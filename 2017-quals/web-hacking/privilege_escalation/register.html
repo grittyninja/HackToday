@@ -1,16 +1,31 @@
-<html>
-	<head>
-		<title>Register</title>
-	</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<body>
-		<form method=POST" action="handle.php">
-			<input type="text" name="username"><br>
-			<input type="text" name="password"><br>
-			<input type="submit" value="Register Sekarang">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<div class="container">
 
-		</form>
-	</body>
-</html>
+	<h2>register</h2>
+	<br>
+<form method="POST" action="handle.php">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" placeholder="" class="form-control" id="username" placeholder="Your username" />
+    </div>
+    <div class="form-group">
+        <label for="password">password</label>
+        <input type="password" placeholder="" class="form-control" id="password" placeholder="password" />
+    </div>
+ 	<div class="form-group">
+        <label for="role">Role</label>
+        <select>
+  	<option value="heker">heker</option>
+  	<option value="nubi">nubi</option>
+	</select>
+    </div>   
+        <button class="btn btn-block btn-danger btn-lg">Register</button>
+        
+</form>
