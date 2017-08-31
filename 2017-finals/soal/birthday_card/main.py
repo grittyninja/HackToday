@@ -5,8 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     person = {'name':"to You", 'secret':"asfvncvcccccc=="}
-    if request.args.get('name'):
-        person['name'] = request.args.get('name')
+    
     template = '''<head>
 <style>
 h1 {
@@ -46,7 +45,7 @@ input[type="submit"] {
 <body>
 <img src="http://www.sharegif.com/wp-content/uploads/2013/12/01/birthday-cake-gif-39.gif" height="250" width="250">
 <p>Happy Birthday %s!</p>
-<form action="" method="get">
+<form action="" method="post">
 <input type="text" name="name" placeholder="Your Name">
 <input type="submit" value="Celebrate It">
 </form>
@@ -61,6 +60,65 @@ input[type="submit"] {
 ''' % person['name']
     return render_template_string(template, person=person)
     
+
+@app.route('/',methods=['POST'])
+def home2():
+    person = {'name':"to You", 'secret':"asfvncvcccccc=="}
+    person['name']= request.form['name']
+    template = '''<head>
+<style>
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    color:black;
+} 
+
+body {
+        text-align: center;
+         background: black;
+         color: white;
+         font-family: Helvetica;
+         background-image: url("https://i.stack.imgur.com/8IjyR.gif");
+         background-size: cover;
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+}
+
+input {
+  border: 1;
+  padding: 12px;
+  font-size: 18px;
+}    
+
+input[type="submit"] {
+  background: limegreen;
+  color: black;
+}
+</style>
+</head>
+<body>
+<img src="http://www.sharegif.com/wp-content/uploads/2013/12/01/birthday-cake-gif-39.gif" height="250" width="250">
+<p>Happy Birthday %s!</p>
+<form action="" method="post">
+<input type="text" name="name" placeholder="Your Name">
+<input type="submit" value="Celebrate It">
+</form>
+<br>
+<form action="/birthday" method="post">
+<input type="hidden" name="id" value="1">
+<input type="submit" value="see your present">
+</form>
+
+</body>
+</html>
+''' % person['name']
+    return render_template_string(template, person=person)
+
 @app.route('/birthday',methods=['POST'])
 def result():
     id_want = request.form['id']
