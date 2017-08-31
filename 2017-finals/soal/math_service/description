@@ -1,0 +1,4 @@
+service
+
+example how to use:
+echo -en "5+5+10" | ruby main.rb
