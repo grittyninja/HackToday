@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>Happppy</title>
+        
+        <style>
+            body {
+  background: #89B582;
+}
+
+.birthday {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 10em;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-shadow: 0px 3px rgba(0,0,0,0.10);
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.current {
+  position: relative;
+  span {
+    &:nth-child(2) {
+      animation: hide 1s 1.5s ease forwards;
+    }
+  }
+  &:after {
+    position: absolute;
+    left: 5px;
+    content: "Years";
+    font-size: 20px;
+    opacity: 0.5;
+  }
+}
+
+.frontend {
+  position: relative;
+  left: 70px;
+  animation: move 0.75s 1s ease forwards;
+  
+  &:after {
+    position: absolute;
+    left: -85px;
+    content: "Days of Front End Development";
+    font-size: 20px;
+    opacity: 0.5;
+    white-space: nowrap;
+    animation: hide 0.5s 1s ease forwards;
+  }
+}
+
+.frontend-text {
+  &:after {
+    content: "3";
+    position: absolute;
+    left: 100%;
+    animation: f-right 0.75s .3s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  }
+  
+  &:before {
+    content: "3";
+    position: absolute;
+    right: 100%;
+    animation: f-left 0.75s .3s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  }
+}
+
+.current,
+.frontend,
+.plus {
+  display: inline-block;
+}
+
+.plus {
+  animation: hide 0.3s 1s ease forwards;
+}
+
+
+@keyframes hide {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+    top: 40px;
+  }
+}
+
+@keyframes f-left {
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes f-right {
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  to {
+    left: -250px;
+  }
+}
+
+@keyframes cake {
+  to {
+    font-size: 28em;
+    color: rgba(255,255,255,0.1);
+  }
+}
+
+.final {
+  position: absolute;
+  font-size: 58px;
+  left: 48%;
+  top: -10px;
+  line-height: 1.3;
+  opacity: 0;
+  animation: show 1s 1.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+  
+  span {
+    display: block;
+  }
+}
+
+.fa-birthday-cake {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 5em;
+  color: rgba(255,255,255,0);
+  animation: cake 1s 2s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+}
+
+
+
+
+        </style>
+        
+        
+    
+    </head>
+    
+    <body>
+        <div class="birthday">
+  <div class="current">
+    <span>H</span><span>&nbsp</span>
+  </div>
+  <span class="plus">&</span>
+  <div class="frontend">
+    <span class="frontend-text">i</span>
+  </div>
+  <div class="final">Happy <span>Birthday</span></div>
+</div>
+<span class="fa fa-birthday-cake"></span>
+
+    </body>
+
+
+</html>
