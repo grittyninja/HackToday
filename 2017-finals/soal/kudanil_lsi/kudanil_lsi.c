@@ -60,14 +60,14 @@ void play(){
 	printf("\n\n~~Map Danau Misterius LSI~~\n\n");
 	printf("\n\nKamu hanya mempunyai %d langkah\n\n", move);
 	while(1){ 
+		if(move<0){
+			printf("Langkah mu habis\n");
+			exit(0);
+		}
 		if(temp!=0)  
 			printf("\n\nSisa langkah kamu  : %d langkah\n", move);
 		temp=1;
 		screen();
-		if(move<=0){
-			printf("Langkah mu habis\n");
-			exit(0);
-		}
 		gerak();
 		move--;
 		peta[ytemp][xtemp] = '~';
@@ -211,7 +211,7 @@ int main()
 	char temp[2];
 	setvbuf(stdout, NULL, _IONBF, 0);
 	printf("Dramaga Game Studios Present\n");
-	randomize(60);
+	//randomize(60);
 	move = solver();
 	while(!move){
 		cle();
