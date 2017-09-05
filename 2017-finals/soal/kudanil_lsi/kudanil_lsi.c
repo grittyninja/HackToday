@@ -213,6 +213,7 @@ int main()
 	printf("Dramaga Game Studios Present\n");
 	//randomize(60);
 	move = solver();
+	randomize(60);
 	while(!move){
 		cle();
 		randomize(60);
