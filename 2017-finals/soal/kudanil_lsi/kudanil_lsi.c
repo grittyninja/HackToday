@@ -211,9 +211,10 @@ int main()
 	char temp[2];
 	setvbuf(stdout, NULL, _IONBF, 0);
 	printf("Dramaga Game Studios Present\n");
-	//randomize(60);
-	move = solver();
+	
 	randomize(60);
+	move = solver();
+	
 	while(!move){
 		cle();
 		randomize(60);
