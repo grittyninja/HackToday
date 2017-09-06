@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	Options -Indexes
+
+	RewriteEngine On
+	
+	#redirect ittoday.web.id/?page=blabla into ittoday.web.id/blabla
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^([0-9a-zA-Z\-]*)$ index.php?p=$1 [QSA,L]
+
+	ErrorDocument 404 /404
+</IfModule>
