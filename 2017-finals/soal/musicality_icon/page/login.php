@@ -13,10 +13,12 @@
 				$data = ['id' => $user['id'], 'username' => $user['username']];
 				$_SESSION['login'] = $data;
 				header("location: profile");
+			}else{
+				echo "<script>alert('User does not exist!');</script>";
 			}
 
 		}else{
-			die("<script>alert('all field must not empty');window.location.href=window.location.href;</script>");
+			die("<script>alert('All field must not empty!');window.location.href=window.location.href;</script>");
 		}
 	}
 ?>

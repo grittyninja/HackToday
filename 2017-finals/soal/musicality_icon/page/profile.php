@@ -50,7 +50,7 @@
 		foreach($data as $key => $d){
 			$filter = ['submit', 'avatar'];
 			if(!in_array($key, $filter) && !$d){
-				die("<script>alert('all field must not empty');window.location.href=window.location.href;</script>");
+				die("<script>alert('Required field must not empty');window.location.href=window.location.href;</script>");
 			}
 		}
 		if($data['avatar']){
@@ -145,10 +145,10 @@
 						  			</div>
 						  			<div class="form-group">
 						  				<label for="avatar">Avatar URL</label>
-						  				<input type="text" name="avatar" placeholder="Your Avatar URL (http://example.com/avatar.jpg)" class="form-control"/>
+						  				<input type="text" name="avatar" id="ava" placeholder="Your Avatar URL (http://example.com/avatar.jpg)" class="form-control"/>
 						  			</div>
 						  			<div class="form-group">
-						  				<button type="submit" name="submit" class="btn btn-musicality">Save</button>
+						  				<button type="submit" name="submit" id="probtn" class="btn btn-musicality">Save</button>
 						  			</div>
 						  		</form>
 					  		</div>
