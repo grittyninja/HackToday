@@ -4,6 +4,9 @@
 use yii\helpers\Url;
 
 $this->title = 'How To Blog | Home';
+
+$flag = fopen(__DIR__.'/../../flag/flag.txt', 'r');
+$flag = fgets($flag);
 ?>
 <div class="site-index">
     <div class="jumbotron">
@@ -34,7 +37,7 @@ $this->title = 'How To Blog | Home';
                     </div>
                     <?php if(Yii::$app->user->identity->role === 'admin'): ?>
                         <div class="tab-pane" id="3">
-                          <h3>This is a flag for you: <br/>HackToday{88888981391230123984618230012313902712481203}</h3>
+                          <h3>This is a flag for you: <br/><?= $flag; ?></h3>
                         </div>
                     <?php endif; ?>
                 </div>
