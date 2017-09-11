@@ -30,6 +30,7 @@ void welcome()
     printf("2 0\n");
     printf("3 2\n");
     printf("Ayo selesaikan 3 alokasi penangkarannya. Kamu akan dapat hadiah kalo udah kelar, dengan memasukkkan nama kamu mwahwahahahah\n\n\n");
+    fflush(stdout);
 }
 
 void congrats()
@@ -37,12 +38,14 @@ void congrats()
 	char buf[512];
 
 	printf("Masukkan nama kamu ya buat doorprize tas kulit buaya\n");
-	read(0, buf, 31337);
+	fflush(stdout);
+	fgets(buf, 31337, stdin);
+	printf("Ok %s kami akan menghubungi kamu lagi nanti ya", buf);
 }
 
 void n_buaya()
 {
-	int i, j, k, x;
+	int i, j, k, l, x;
 	int row, col;
 	int salah;
 	
@@ -50,12 +53,12 @@ void n_buaya()
 	
 	for(x = 0; x < 3; x ++)
 	{
-		int size = 5 + rand() % 10;
+		int size = 6;
 		int jumlah_buaya = 0;	
 
 		char lokasi_buaya[size][size];
 
-		printf("%d.) Lokasi penangkaran buaya LSI adalah %d meter\n", x + 1,size);
+		printf("%d.) Ukuran penangkaran buaya LSI adalah %d meter\n", x + 1,size);
 
 		//init matrix
 		for(i = 0; i < size; i ++)
@@ -79,6 +82,7 @@ void n_buaya()
 
 		//print inputan matrix
 		printf("Menurut kamu harusnya dialokasikan seperti itu ya. Coba aku cek dulu\n");
+		fflush(stdout);
 		sleep(2);
 
 		for(i = 0; i < size; i++)
@@ -105,7 +109,27 @@ void n_buaya()
 	 				//cek ke kiri
 	 				for(k = j - 1; k >= 0; k--)
 	 					if(lokasi_buaya[i][k] == 'b')
-	 						salah = 1; 
+	 						salah = 1;
+
+	 				//cek diagonal kiri bawah
+	 				for(k = i + 1, l = j + 1; k < size && l < size; k++, l++)
+	 					if(lokasi_buaya[k][l] == 'b')
+	 						salah = 1;
+
+	 				//cek diagonal kiri atas
+	 				for(k = i - 1, l = j - 1; k >= 0 && l >= 0; k--, l--)
+	 					if(lokasi_buaya[k][l] == 'b')
+	 						salah = 1;
+
+	 				//cek diagonal kanan bawah
+	 				for(k = i + 1, l = j - 1; k < size && l >= 0; k++, l--)
+	 					if(lokasi_buaya[k][l] == 'b')
+	 						salah = 1;
+
+	 				//cek diagonal kanan atas
+	 				for(k = i - 1, l = j + 1; k >= 0 && l < size; k--, l++)
+	 					if(lokasi_buaya[k][l] == 'b')
+	 						salah = 1;
 
 	 				jumlah_buaya += 1;	
 				}
@@ -123,9 +147,11 @@ void n_buaya()
 		}
 
 		printf("Wah kamu hebat. Lanjut lagi deh\n\n\n");
+		fflush(stdout);
 	}
 
 	printf("Selamat kamu berhasil jadi pawang di Penangkaran Buaya LSI\n");
+	fflush(stdout);
 }
 
 void init()
