@@ -28,7 +28,7 @@ void welcome()
     printf("1 3\n");
     printf("2 0\n");
     printf("3 2\n");
-    printf("Ayo selesaikan 5 alokasi penangkarannya. Kamu akan dapat hadiah jika berhasil.\n\n");
+    printf("Ayo selesaikan 20 alokasi penangkarannya. Kamu akan dapat hadiah jika berhasil.\n\n");
    
 }
 
@@ -40,7 +40,7 @@ void n_buaya()
 	
 	srand(getpid());
 	
-	for(x = 0; x < 5; x ++)
+	for(x = 0; x < 20; x ++)
 	{
 		int size = 5 + rand() % 10;
 		int jumlah_buaya = 0;	
