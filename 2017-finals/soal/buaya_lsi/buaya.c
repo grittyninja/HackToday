@@ -29,18 +29,8 @@ void welcome()
     printf("1 3\n");
     printf("2 0\n");
     printf("3 2\n");
-    printf("Ayo selesaikan 3 alokasi penangkarannya. Kamu akan dapat hadiah kalo udah kelar, dengan memasukkkan nama kamu mwahwahahahah\n\n\n");
-    fflush(stdout);
-}
-
-void congrats()
-{
-	char buf[512];
-
-	printf("Masukkan nama kamu ya buat doorprize tas kulit buaya\n");
-	fflush(stdout);
-	read(0, buf, 31337);
-	printf("Ok %s kami akan menghubungi kamu lagi nanti ya", buf);
+    printf("Ayo selesaikan 3 alokasi penangkarannya. Kamu akan dapat hadiah kalo udah kelar, dengan memasukkan nama kamu mwahwahahahah\n\n");
+   
 }
 
 void n_buaya()
@@ -53,7 +43,7 @@ void n_buaya()
 	
 	for(x = 0; x < 3; x ++)
 	{
-		int size = 5 + rand() % 10;
+		int size = 6;
 		int jumlah_buaya = 0;	
 
 		char lokasi_buaya[size][size];
@@ -72,17 +62,9 @@ void n_buaya()
 			lokasi_buaya[row][col] = 'b';
 		}
 
-		for(i = 0; i < size; i++)
-		{
-			for(j = 0; j < size; j++)
-				printf("%c ", lokasi_buaya[i][j]);
-
-			printf("\n");
-		}
-
-		//print inputan matrix
-		printf("Menurut kamu harusnya dialokasikan seperti itu ya. Coba aku cek dulu\n");
-		fflush(stdout);
+		// print inputan matrix
+		printf("Coba aku cek dulu\n");
+	
 		sleep(2);
 
 		for(i = 0; i < size; i++)
@@ -135,28 +117,35 @@ void n_buaya()
 				}
 				if(salah)
 				{
-					printf("Kamu kurang tepat mengalokasikan buaya - buaya itu :(\n");
+					printf("Salah\n");
 					exit(0);
 				}
 			}
 
 		if(jumlah_buaya != size)
 		{
-			printf("Aku kecewa kamu ga serius :(\n");
+			printf("Curang\n");
 			exit(0);
 		}
 
-		printf("Wah kamu hebat. Lanjut lagi deh\n\n\n");
-		fflush(stdout);
+		printf("Dabziw\n");
 	}
-
-	printf("Selamat kamu berhasil jadi pawang di Penangkaran Buaya LSI\n");
-	fflush(stdout);
 }
 
 void init()
 {
 	setvbuf(stdout, NULL, _IONBF, 0);
+}
+
+void congrats()
+{
+	char buf[512];
+
+	printf("Masukkan nama kamu ya buat doorprize tas kulit buaya\n");
+	getc(stdin); //terima newline hasil scanf
+
+	gets(buf);
+	printf("Ok %s kami akan menghubungi kamu lagi nanti ya\n", buf);
 }
 
 int main(int argc, char* argv[])
@@ -165,5 +154,6 @@ int main(int argc, char* argv[])
 	welcome();
 	n_buaya();
 	congrats();
+
 	return 0;
 }
