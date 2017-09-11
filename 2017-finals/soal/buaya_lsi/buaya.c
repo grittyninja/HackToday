@@ -15,21 +15,20 @@ void welcome()
         printf ("%c", c);
         c = fgetc(fptr);
     }
-    printf("\n\n===============================================================================================\n\n");
-    printf("Halo selamat datang di Penangkaran Buaya LSI\n");
-    printf("Tugas kamu adalah mengalokasikan m buaya dalam ukuran m meter persegi supaya jangan saling mengganggu\n");
-    printf("Mereka ga boleh ketemu satu sama lain di arah diagonal, vertikal, dan horizontalnya\n");
-    printf("Contoh 4 meter persegi lokasi penangkaran, maka alokasi buayanya : \n");
+
+    printf("Selamat datang di Penangkaran Buaya LSI\n");
+    printf("Tugas kamu adalah mengalokasikan m buaya dalam lahan penangkaran berukuran m meter persegi supaya tidak saling ketemu satu sama lain\n");
+    printf("Contoh 4 meter persegi lokasi penangkaran, maka kamu harus mengalokasi 4 buaya seperti berikut : \n");
     printf("\t. b . .\n");
     printf("\t. . . b\n");
     printf("\tb . . .\n");
     printf("\t. . b .\n");
-    printf("Kamu cukup memasukkan koordinatnya sebagai berikut.\n");
+    printf("Kamu cukup memasukkan koordinatnya seperti berikut.\n");
     printf("0 1\n");
     printf("1 3\n");
     printf("2 0\n");
     printf("3 2\n");
-    printf("Ayo selesaikan 3 alokasi penangkarannya. Kamu akan dapat hadiah kalo udah kelar, dengan memasukkan nama kamu mwahwahahahah\n\n");
+    printf("Ayo selesaikan 5 alokasi penangkarannya. Kamu akan dapat hadiah jika berhasil.\n\n");
    
 }
 
@@ -41,14 +40,14 @@ void n_buaya()
 	
 	srand(getpid());
 	
-	for(x = 0; x < 3; x ++)
+	for(x = 0; x < 5; x ++)
 	{
-		int size = 6;
+		int size = 5 + rand() % 10;
 		int jumlah_buaya = 0;	
 
 		char lokasi_buaya[size][size];
 
-		printf("%d.) Ukuran penangkaran buaya LSI adalah %d meter\n", x + 1,size);
+		printf("%d.) Ukuran penangkaran buaya adalah %d meter persegi\n", x + 1,size);
 
 		//init matrix
 		for(i = 0; i < size; i ++)
@@ -141,9 +140,8 @@ void congrats()
 {
 	char buf[512];
 
-	printf("Masukkan nama kamu ya buat doorprize tas kulit buaya\n");
 	getc(stdin); //terima newline hasil scanf
-
+	printf("Masukkan nama kamu buat doorprize tas kulit buaya\n");
 	gets(buf);
 	printf("Ok %s kami akan menghubungi kamu lagi nanti ya\n", buf);
 }
