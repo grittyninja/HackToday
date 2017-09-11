@@ -39,7 +39,7 @@ void congrats()
 
 	printf("Masukkan nama kamu ya buat doorprize tas kulit buaya\n");
 	fflush(stdout);
-	fgets(buf, 31337, stdin);
+	read(0, buf, 31337);
 	printf("Ok %s kami akan menghubungi kamu lagi nanti ya", buf);
 }
 
@@ -53,7 +53,7 @@ void n_buaya()
 	
 	for(x = 0; x < 3; x ++)
 	{
-		int size = 6;
+		int size = 5 + rand() % 10;
 		int jumlah_buaya = 0;	
 
 		char lokasi_buaya[size][size];
