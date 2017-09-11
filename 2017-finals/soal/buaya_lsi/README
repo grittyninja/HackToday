@@ -1,0 +1,4 @@
+ROP (setresuid bocor) + n_queen
+Letakkan binary buaya di server dengan chown user lain (misal user X)
+Permission buaya 4755
+Permission flag 600 milik user X
