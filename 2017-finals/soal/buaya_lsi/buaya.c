@@ -135,7 +135,7 @@ void init()
 
 int main(int argc, char* argv[])
 {
-	// init();
+	init();
 	welcome();
 	n_buaya();
 	congrats();
