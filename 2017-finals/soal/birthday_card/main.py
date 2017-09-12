@@ -140,4 +140,6 @@ def get_user_file(f_name):
 app.jinja_env.globals['get_user_file'] = get_user_file # Allows for use in Jinja2 templates
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
+    # app.run(port=8888)
+    # debug=True or not specified
