@@ -63,7 +63,7 @@ input[type="submit"] {
 
 @application.route('/',methods=['POST'])
 def home2():
-    person = {'name':"to You", 'secret':"asfvncvcccccc=="}
+    person = {'name':"to You", 'secret':open('flag','r').read()}
     person['name']= request.form['name']
     template = '''<head>
 <style>
