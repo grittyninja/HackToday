@@ -23,7 +23,7 @@ body {
          background: black;
          color: white;
          font-family: Helvetica;
-         background-image: url("https://i.stack.imgur.com/8IjyR.gif");
+         background-color: white;
          background-size: cover;
          background-position: center center;
          background-repeat: no-repeat;
@@ -117,7 +117,7 @@ input[type="submit"] {
 </body>
 </html>
 ''' % birthday['nama']
-    return render_template_string(template, person=birthday)
+    return render_template_string(template, birthday=birthday)
 
 @application.route('/birthday',methods=['POST'])
 def result():
@@ -135,9 +135,8 @@ def get_user_file(f_name):
     with open(f_name) as f:
         return f.readlines()
 
-application.jinja_env.globals['get_user_file'] = get_user_file # Allows for use in Jinja2 templates
+application.jinja_env.globals['get_user_file'] = get_user_file
 
 if __name__ == "__main__":
     application.run(host='0.0.0.0',port="7576")
-    # applicationrun(port=8888)
-    # debug=True or not specified
+
