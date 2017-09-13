@@ -18,7 +18,7 @@ char peta[11][21] = {"h~~~~~~~~~~~~~~~~~~",
  					 "~~~~~~~~~~~~~~~~~~~" ,
  					 "~~~~~~~~~~~~~~~~~~~" ,
  					 "~~~~~~~~~~~~~~~~~~~" ,
- 					 "~~~~~~~~~~~~~~~~~~~"};
+ 					 "~~~~~~~~~~~~/bin/su"};
 
 int cle(){
 	int i, j;
@@ -41,7 +41,7 @@ int y = 0;
 int xtemp = 0;
 int ytemp = 0;
 void loading(){
-	peta[10][18] = '~';
+	
 	int i;
 	for (i = 0; i < 3; ++i)
 	{
@@ -208,6 +208,15 @@ int solver(){
 		
 }
 
+void handler(){
+	printf("Waktu habis\n");
+	loading();
+	sleep(1);
+	printf("T E N G G E L A M\n");
+	sleep(1);
+	printf("Whahahaha\n");
+	exit(0);
+}
 
 int main()
 {
@@ -234,7 +243,7 @@ int main()
 	char c;
 	while((c= getchar()) != '\n' && c != EOF);
 	alarm(5);
-	signal(SIGALRM, exit);
+	signal(SIGALRM, handler);
 
 	play();
 	return 0;
