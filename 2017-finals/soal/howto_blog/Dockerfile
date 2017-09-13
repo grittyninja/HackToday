@@ -70,13 +70,15 @@ RUN mkdir /run/apache2 \
 ARG flag
 ARG flag_name
 ARG username
+ARG password
 ENV flag=${flag}
 ENV flag_name=${flag_name}
 ENV username=${username}
+ENV password=${password}
 
 # create user
 RUN adduser -D -u 1000 $username
-RUN echo "$username:$flag" | chpasswd
+RUN echo "$username:$password" | chpasswd
 
 # create webroot directory
 RUN mkdir -p /var/www/html

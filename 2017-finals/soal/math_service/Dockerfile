@@ -16,10 +16,12 @@ ARG flag
 ARG flag_name
 ARG binary
 ARG username
+ARG password
 ENV flag=${flag}
 ENV flag_name=${flag_name}
 ENV binary=${binary}
 ENV username=${username}
+ENV password=${password}
 
 # Set WorkDir
 RUN mkdir /app
@@ -30,7 +32,7 @@ WORKDIR /app
 EXPOSE 22
 RUN mkdir /var/run/sshd
 RUN adduser --disabled-password --gecos "" $username
-RUN echo "$username:$flag" | chpasswd
+RUN echo "$username:$password" | chpasswd
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 
