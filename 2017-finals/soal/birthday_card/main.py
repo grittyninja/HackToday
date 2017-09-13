@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template_string, render_template, url_for
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def home():
     person = {'name':"to You", 'secret':"asfvncvcccccc=="}
     
@@ -61,7 +61,7 @@ input[type="submit"] {
     return render_template_string(template, person=person)
     
 
-@app.route('/',methods=['POST'])
+@application.route('/',methods=['POST'])
 def home2():
     person = {'name':"to You", 'secret':"asfvncvcccccc=="}
     person['name']= request.form['name']
@@ -119,14 +119,14 @@ input[type="submit"] {
 ''' % person['name']
     return render_template_string(template, person=person)
 
-@app.route('/birthday',methods=['POST'])
+@application.route('/birthday',methods=['POST'])
 def result():
     id_want = request.form['id']
     if id_want!="1":
         return render_template("birthday.html")
     return "It's Okay if you <b>don\'t</b> like the present"
 
-@app.route('/birthday')
+@application.route('/birthday')
 def result2():
     return render_template("birthday.html")
     
@@ -137,9 +137,9 @@ def get_user_file(f_name):
     with open(f_name) as f:
         return f.readlines()
 
-app.jinja_env.globals['get_user_file'] = get_user_file # Allows for use in Jinja2 templates
+application.jinja_env.globals['get_user_file'] = get_user_file # Allows for use in Jinja2 templates
 
 if __name__ == "__main__":
-    app.run()
-    # app.run(port=8888)
+    application.run(host='0.0.0.0',port="7575")
+    # applicationrun(port=8888)
     # debug=True or not specified
