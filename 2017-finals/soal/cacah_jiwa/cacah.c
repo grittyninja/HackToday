@@ -1,8 +1,12 @@
-// gcc -m32 -mpreferred-stack-boundary=4 cacah.c -o cacah
+// gcc -g -m32 -fno-stack-protector -mpreferred-stack-boundary=4 cacah.c -o cacah
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <dirent.h>
+
+
+char *cmd = "/bin/sh";
 
 struct nodes
 {
@@ -17,7 +21,7 @@ void init()
 
 void libc_main()
 {
-	system("/ben/ul");
+	system(cmd);
 }
 
 
@@ -32,27 +36,26 @@ int main(int argc, char * argv[])
 	welcome();
 	
 	struct nodes *node1, *node2, *node3;
-	int pilihan;
+
 	int umur;
 
 	while(1)
 	{
 		node1 = malloc(sizeof(struct nodes));
 		node1->nama = malloc(8);
+		node1->umur = 1;
 
 		node2 = malloc(sizeof(struct nodes));
 		node2->nama = malloc(8);
+		node1->umur = 2;
 
 		printf("Nama suami : ");
-		read(0, node1->nama, 100);
-		printf("Umur suami : ");
-		scanf("%d", &node1->umur);
-		printf("Nama istri : ");
-		read(0, node2->nama, 100);
-		printf("Umur istri : ");	
-		scanf("%d", &node1->umur);
+		gets(node1->nama);
 
-		printf("Terima kasih ya mz\n");
+		printf("Nama istri : ");
+		gets(node2->nama);
+
+		fflush(stdin);
 	}
 
 	return 0;
