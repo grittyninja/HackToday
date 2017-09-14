@@ -14,8 +14,8 @@ docker_log="docker_$binary.log"
 docker_csv="docker_$binary.csv"
 username_list="username.list"
 token_list="token.list"
-usernames=( $( cat ./$username_list ) )
-tokens=( $( cat ./$token_list ) )
+usernames=( $( cat ../$username_list ) )
+tokens=( $( cat ../$token_list ) )
 echo -n "" > $docker_log
 echo -n "" > $docker_csv
 for team in $(seq -f "%02g" 1 $team_num); do
