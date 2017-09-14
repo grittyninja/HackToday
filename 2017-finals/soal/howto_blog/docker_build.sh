@@ -24,8 +24,8 @@ for team in $(seq -f "%02g" 1 $team_num); do
   sport="$sport_prefix""$team""$chall_num"
   flag_name="flag_$(tr -cd '[:alnum:]' < /dev/urandom | fold -w30 | head -n1 | md5sum | awk '{ print $1 }')"
   flag="HackToday{$(tr -cd '[:alnum:]' < /dev/urandom | fold -w30 | head -n1 | sha256sum | awk '{ print $1 }')}"
-  username="${usernames[$((${team##+(0)}-1))]}"
-  password=`echo -n "${tokens[$((${team##+(0)}-1))]}$flag" | md5sum | awk '{print $1}'`
+  username="${usernames[$(expr $team - 1)]}"
+  password=`echo -n "${tokens[$(expr $team - 1)]}$flag" | md5sum | awk '{print $1}'`
   echo "Team: $team" >> $docker_log
   echo "Username: $username" >> $docker_log
   echo "Password: $password" >> $docker_log

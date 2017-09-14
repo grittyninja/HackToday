@@ -23,7 +23,7 @@ ENV gambar='buaya.gambar'
 ENV username=${username}
 ENV password=${password}
 
-RUN id_buaya=$(/usr/bin/shuf -i150-20000 -n1) && adduser -u $id_buaya buaya
+RUN id_buaya=$(/usr/bin/shuf -i150-20000 -n1) && adduser -u $id_buaya --disabled-password --gecos "" buaya
 
 #RUN adduser -u 2121 buaya
 
@@ -35,16 +35,16 @@ WORKDIR /app
 # SSH Docker
 EXPOSE 22
 RUN mkdir /var/run/sshd
-RUN adduser -u $id_buaya buaya
-RUN adduser -u 841 $username
+#RUN adduser -u $id_buaya buaya
+RUN adduser -u 841 --disabled-password --gecos "" $username
 RUN echo "$username:$password" | chpasswd
 #RUN echo "buaya:akuadalahbuayaterbaikdilembagasurveyindonesia" | chpasswd
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 
 # Copy ruby to workdir
-COPY challs/$binary /app/$binary
-COPY challs/$gambar /app/$gambar
+COPY $binary /app/$binary
+COPY $gambar /app/$gambar
 RUN echo $flag > "/app/$flag_name"
 
 RUN chown buaya:buaya $flag_name && chmod 600 $flag_name
