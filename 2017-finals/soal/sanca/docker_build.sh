@@ -9,13 +9,13 @@ team_num=$2
 binary=$1
 cport_prefix="3"
 sport_prefix="2"
-chall_num="01"
+chall_num="08"
 docker_log="docker_$binary.log"
 docker_csv="docker_$binary.csv"
-username_list="../username.list"
-token_list="../token.list"
-usernames=( $( cat ./$username_list ) )
-tokens=( $( cat ./$token_list ) )
+username_list="username.list"
+token_list="token.list"
+usernames=( $( cat ../$username_list ) )
+tokens=( $( cat ../$token_list ) )
 echo -n "" > $docker_log
 echo -n "" > $docker_csv
 for team in $(seq -f "%02g" 1 $team_num); do
@@ -34,6 +34,6 @@ for team in $(seq -f "%02g" 1 $team_num); do
   echo "CPort: $cport" >> $docker_log
   echo "SPort: $sport" >> $docker_log
   echo "$flag,$(expr $team + 0),$(expr $chall_num + 0)" >> $docker_csv
-  docker build --build-arg "password=$password" --build-arg "username=$username" --build-arg "flag=$flag" --build-arg "flag_name=$flag_name" -t $tag_name .
-  docker run -p "$cport:5000" -p "$sport:22" -itd $tag_name
+  docker build --build-arg "password=$password" --build-arg "binary=$binary" --build-arg "username=$username" --build-arg "flag=$flag" --build-arg "flag_name=$flag_name" -t $tag_name .
+  docker run -p "$cport:5000" -p "$sport:22" -itd $tag_name 
 done
