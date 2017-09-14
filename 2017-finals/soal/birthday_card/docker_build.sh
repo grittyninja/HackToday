@@ -12,8 +12,8 @@ sport_prefix="2"
 chall_num="01"
 docker_log="docker_$binary.log"
 docker_csv="docker_$binary.csv"
-username_list="../username.list"
-token_list="../token.list"
+username_list="username.list"
+token_list="token.list"
 usernames=( $( cat ./$username_list ) )
 tokens=( $( cat ./$token_list ) )
 echo -n "" > $docker_log
