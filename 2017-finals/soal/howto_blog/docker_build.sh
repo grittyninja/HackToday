@@ -33,7 +33,7 @@ for team in $(seq -f "%02g" 1 $team_num); do
   echo "Flag: $flag" >> $docker_log
   echo "CPort: $cport" >> $docker_log
   echo "SPort: $sport" >> $docker_log
-  echo "$flag,$(expr $chall_num + 0),$(expr $chall_num + 0)" >> $docker_csv
+  echo "$flag,$(expr $team + 0),$(expr $chall_num + 0)" >> $docker_csv
   docker build --build-arg "password=$password" --build-arg "username=$username" --build-arg "flag=$flag" --build-arg "flag_name=$flag_name" -t $tag_name .
   docker run -p "$cport:80" -p "$sport:22" -itd $tag_name 
 done
