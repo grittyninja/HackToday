@@ -97,7 +97,7 @@ ADD challs /var/www/html
 RUN rm -f /var/www/html/README.md
 
 # change ownership and mode
-RUN chown -R $username:$username /var/www/html && chmod -R 755 /var/www/html && mkdir bootstrap
+RUN chown -R root:$username /var/www/html/* && chmod -R 775 /var/www/html/* && mkdir bootstrap
 RUN chown -R apache:apache /var/www/html/sqlite
 RUN chown -R apache:apache /var/www/html/static
 
