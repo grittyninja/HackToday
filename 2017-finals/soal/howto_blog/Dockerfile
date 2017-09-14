@@ -6,35 +6,35 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 
 # Add basics first
 RUN apk update && apk upgrade && apk add \
-  bash apache2 php5-apache2 curl ca-certificates openssl git php5 php5-phar php5-json php5-iconv php5-openssl tzdata openntpd vim nano
+	bash apache2 php5-apache2 curl ca-certificates openssl git php5 php5-phar php5-json php5-iconv php5-openssl tzdata openntpd vim nano
 
 # Setup apache and php
 RUN apk add \
-  php5-ftp \
-  php5-mcrypt \
-  php5-soap \
-  php5-gmp \
-  php5-pdo_odbc \
-  php5-dom \
-  php5-pdo \
-  php5-zip \
-  php5-mysqli \
-  php5-sqlite3 \
-  php5-pdo_pgsql \
-  php5-bcmath \
-  php5-gd \
-  php5-odbc \
-  php5-pdo_mysql \
-  php5-pdo_sqlite \
-  php5-gettext \
-  php5-xmlrpc \
-  php5-bz2 \
-  php5-pdo_dblib \
-  php5-curl \
-  php5-ctype \
-  sqlite \
-  rsync pwgen netcat-openbsd\
-  && cp /usr/bin/php5 /usr/bin/php \
+	php5-ftp \
+	php5-mcrypt \
+	php5-soap \
+	php5-gmp \
+	php5-pdo_odbc \
+	php5-dom \
+	php5-pdo \
+	php5-zip \
+	php5-mysqli \
+	php5-sqlite3 \
+	php5-pdo_pgsql \
+	php5-bcmath \
+	php5-gd \
+	php5-odbc \
+	php5-pdo_mysql \
+	php5-pdo_sqlite \
+	php5-gettext \
+	php5-xmlrpc \
+	php5-bz2 \
+	php5-pdo_dblib \
+	php5-curl \
+	php5-ctype \
+	sqlite \
+	rsync pwgen netcat-openbsd\
+	&& cp /usr/bin/php5 /usr/bin/php \
     && rm -f /var/cache/apk/*
 
 # Add Composer
@@ -90,7 +90,7 @@ ADD challs /var/www/html
 RUN rm -f /var/www/html/README.md
 
 # change ownership and mode
-RUN chown -R $username:$username /var/www/html && chmod -R 755 /var/www/html && mkdir bootstrap
+RUN chown -R root:$username /var/www/html/* && chmod -R 775 /var/www/html/* && mkdir bootstrap
 RUN chown -R apache:apache /var/www/html/sqlite
 RUN chown -R apache:apache /var/www/html/assets
 RUN chown -R apache:apache /var/www/html/runtime
@@ -102,7 +102,7 @@ RUN composer install --no-dev
 # store and securing flag
 RUN echo $flag > /var/www/html/flag/$flag_name
 RUN sed -i "s/flag.txt/$flag_name/g" /var/www/html/views/site/index.php
-RUN chown root:root /var/www/html/flag/$flag_name && chmod 755 /var/www/html/flag/$flag_name
+RUN chown -R root:root /var/www/html/flag && chmod -R 755 /var/www/html/flag
 
 #bootstrap
 ADD start.sh /bootstrap/
