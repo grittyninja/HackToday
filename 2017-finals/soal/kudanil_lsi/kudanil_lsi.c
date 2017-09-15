@@ -7,8 +7,8 @@
 
 int move;
 
-int visited[11][21];
-char peta[11][21] = {"h~~~~~~~~~~~~~~~~~~",
+int visited[11][20];
+char peta[11][20] = {"h~~~~~~~~~~~~~~~~~~",
  					 "~~~~~~~~~~~~~~~~~~~" ,
  					 "~~~~~~~~~~~~~~~~~~~" ,
  					 "~~~~~~~~~~~~~~~~~~~" ,
@@ -22,10 +22,9 @@ char peta[11][21] = {"h~~~~~~~~~~~~~~~~~~",
 
 int cle(){
 	int i, j;
-	!strcmp("/bin/sh", peta[10]+18);
 	for (i = 0; i < 11; ++i)
 	{
-		for(j = 0; j < 21 ; j++){
+		for(j = 0; j < 20 ; j++){
 			if(peta[i][j] == '*') peta[i][j] = '~';
 			visited[i][j] = 0;
 		
@@ -41,7 +40,7 @@ int y = 0;
 int xtemp = 0;
 int ytemp = 0;
 void loading(){
-	
+
 	int i;
 	for (i = 0; i < 3; ++i)
 	{
@@ -76,11 +75,36 @@ void play(){
 		screen();
 		gerak();
 		move--;
-		peta[ytemp][xtemp] = '~';
-		xtemp = x;
-		ytemp = y;
-		peta[y][x] = 'h';
-
+		if (ytemp < 10)
+		{
+			peta[ytemp][xtemp] = '~';
+			xtemp = x;
+			ytemp = y;
+			peta[y][x] = 'h';
+		}
+		else if (ytemp == 10 && xtemp < 12) {
+			peta[ytemp][xtemp] = '~';
+			xtemp = x;
+			ytemp = y;
+			peta[y][x] = 'h';
+		}
+		else {
+			if (xtemp == 12)
+				peta[ytemp][xtemp] = '/';
+			else if (xtemp == 13)
+				peta[ytemp][xtemp] = 'b';
+			else if (xtemp == 14)
+				peta[ytemp][xtemp] = 'i';
+			else if (xtemp == 15)
+				peta[ytemp][xtemp] = 'n';
+			else if (xtemp == 16)
+				peta[ytemp][xtemp] = '/';
+			else if (xtemp == 17)
+				peta[ytemp][xtemp] = 's';
+			xtemp = x;
+			ytemp = y;
+			peta[y][x] = 'h';	
+		}
 	}
 }
 
@@ -128,8 +152,8 @@ int randomize(int buaya){
 	
 	int summon = 0;
 	while(summon < buaya){
-		int fieldx = ((rand() % (21)));		
-		int fieldy = ((rand() % (21)));		
+		int fieldx = ((rand() % (20)));		
+		int fieldy = ((rand() % (20)));		
 		if(peta[fieldy][fieldx] == '~'){
 			summon ++;
 			peta[fieldy][fieldx] = '*';
@@ -242,7 +266,7 @@ int main()
 	printf("Press Any Key to Start Game\n");
 	char c;
 	while((c= getchar()) != '\n' && c != EOF);
-	alarm(5);
+	alarm(7);
 	signal(SIGALRM, handler);
 
 	play();
