@@ -7,8 +7,8 @@ Stabil & tested :
 - 8
 
 Not yet tested:
+- 1
 - 3
-
 
 untuk test soal, bisa dikembangkan dari source untuk soal 3,6,8.
 
