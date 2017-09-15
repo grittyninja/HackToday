@@ -67,18 +67,11 @@ RUN mkdir /run/apache2 \
     && printf "\n<Directory \"/var/www/html\">\n\tAllowOverride All\n</Directory>\n" >> /etc/apache2/httpd.conf
 
 # add flag
-ARG flag
-ARG flag_name
 ARG username
-ARG password
-ENV flag=${flag}
-ENV flag_name=${flag_name}
 ENV username=${username}
-ENV password=${password}
 
 # create user
 RUN adduser -D -u 1000 $username
-RUN echo "$username:$password" | chpasswd
 
 # create webroot directory
 RUN mkdir -p /var/www/html
@@ -98,6 +91,15 @@ RUN chown -R apache:apache /var/www/html/runtime
 # composer install
 WORKDIR /var/www/html
 RUN composer install --no-dev
+
+# store
+ARG flag
+ARG flag_name
+ARG password
+ENV flag=${flag}
+ENV flag_name=${flag_name}
+ENV password=${password}
+RUN echo "$username:$password" | chpasswd
 
 # store and securing flag
 RUN echo $flag > /var/www/html/flag/$flag_name
