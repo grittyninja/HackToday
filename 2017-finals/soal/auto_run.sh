@@ -55,31 +55,31 @@ done
 echo "Run Kudanil"
 sleep 2
 chall_num="05"
-name="kudanil"
+name="kudanil_lsi"
 for team in $(seq -f "%02g" 1 $team_num); do 
 	tagname=$name"__"$team
 	cport="$cport_prefix""$team""$chall_num"
   	sport="$sport_prefix""$team""$chall_num"
 	echo $tagname
-	docker run --restart always -p "$cport:80" -p "$sport:22" -itd $tagname
+	docker run --restart always -p "$cport:5000" -p "$sport:22" -itd $tagname
 done
 
-echo "Run Blog"
+echo "Run Math Service"
 sleep 2
 chall_num="06"
-name="blog"
+name="math"
 for team in $(seq -f "%02g" 1 $team_num); do 
 	tagname=$name"__"$team
 	cport="$cport_prefix""$team""$chall_num"
   	sport="$sport_prefix""$team""$chall_num"
 	echo $tagname
-	docker run --restart always -p "$cport:80" -p "$sport:22" -itd $tagname
+	docker run --restart always -p "$cport:5000" -p "$sport:22" -itd $tagname
 done
 
-echo "Run Blog"
+echo "Run Musicality Icon"
 sleep 2
 chall_num="07"
-name="blog"
+name="musicality_icon"
 for team in $(seq -f "%02g" 1 $team_num); do 
 	tagname=$name"__"$team
 	cport="$cport_prefix""$team""$chall_num"
@@ -88,15 +88,15 @@ for team in $(seq -f "%02g" 1 $team_num); do
 	docker run --restart always -p "$cport:80" -p "$sport:22" -itd $tagname
 done
 
-echo "Run Blog"
+echo "Run Sanca"
 sleep 2
 chall_num="08"
-name="blog"
+name="sanca"
 for team in $(seq -f "%02g" 1 $team_num); do 
 	tagname=$name"__"$team
 	cport="$cport_prefix""$team""$chall_num"
   	sport="$sport_prefix""$team""$chall_num"
 	echo $tagname
-	docker run --restart always -p "$cport:80" -p "$sport:22" -itd $tagname
+	docker run --restart always -p "$cport:5000" -p "$sport:22" -itd $tagname
 done
 
